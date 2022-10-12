@@ -1,0 +1,176 @@
+/* #region - stops scroll bounce */
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+#root{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+/* #endregion */
+
+body{
+    background-color: #f9d2e4;
+    background-image: url("http://localhost:3000/textures/natural-paper.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); */
+}
+
+
+#grid{
+    display:grid;
+    grid-template-areas:
+        "header header header"
+        "message-left message-center message-right"
+        "inputs inputs inputs" ;
+    grid-template-rows: 22vh 50vh 28vh;
+    grid-template-columns: 20vw 60vw 20vw;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h3{
+    color: #e01e56;
+    color: hsla(343, 76%, 50%, 80%);
+}
+/* #region heading */
+#heading{
+    grid-area: header;
+    position: relative;
+    align-self: end;
+    background-color:  #f2f2f2;
+    background-image: url("http://localhost:3000/textures/rice-paper-3.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
+    box-shadow: -1px 1px 3px grey;
+    transform:skew(-10deg,-1deg);
+    width: 70%;
+    margin: 0% auto;
+    padding: 0.2% 8% 0.2% 4%;
+}
+
+#headText{
+    font-family: 'Rock Salt', cursive;
+    font-size: 5em;
+    line-height: 20%;
+    text-align: center;
+    opacity: 0.85;
+}
+/* #endregion */
+
+/* #region message */
+.messagePaper{
+    grid-area: message-center;
+    position:relative;
+    background-color:  #f2f2f2;
+    background-image: url("http://localhost:3000/textures/rice-paper-3.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
+    box-shadow: -1px 1px 3px grey;
+    transform:skew(-10deg,-1deg);
+    margin: 7.5% auto;
+    padding: 1% 5%;
+    width: 75%;
+    align-self:center;
+}
+
+.message{
+    font-family: 'The Girl Next Door';
+    font-size: 2.25rem;
+    transform:skew(20deg,1deg);
+    text-align:center;
+    margin: 0 auto;
+    width:100%;
+    z-index: 1;
+}
+/* #endregion */
+
+/* #region inputs and button */
+.inputArea{
+    grid-area: inputs;
+    position: relative;
+    align-self: start;
+    margin: 0% auto;
+}
+
+input, button{
+    background-color:  #f2f2f2;
+    background-image: url("http://localhost:3000/textures/rice-paper-3.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
+    border: 1px solid #f2f2f2;
+    box-shadow: -1px 1px 3px grey;
+    outline-color:#ef5b99;
+    outline-color:hsla(335, 82%, 65%, 0.5);
+    color: #e01e56;
+    color: hsl(343, 76%, 50%);
+    font-family: 'The Girl Next Door';
+    font-size: 1.25rem;
+    height: 40px;
+    text-align: center;
+    margin: 20px;
+  }
+  .shadowButton :hover{
+      box-shadow:none;
+  }
+  ::placeholder{
+    color: #ef5b99;
+    color: hsl(335, 82%, 65%);
+    font-family: 'The Girl Next Door';
+    font-size: 1.25rem;
+    transform: skew(-20deg,-1deg);
+    margin: 0 auto;
+  }
+  #userName{
+    transform:skew(20deg,-1deg);
+    width: 225px;
+  }
+  
+  #loveName{
+    transform:skew(20deg,2deg);
+    width: 225px;
+  }
+
+  #submit{
+    transform:skew(-10deg);
+    width: 120px; 
+    outline-color:#ef5b99;
+    outline-color:hsla(335, 82%, 65%, 0.5);
+  }
+/* #endregion */
+
+
+
+/* #region gosling message */
+  .gosling{
+    grid-area: message-center;
+    z-index: 0;
+    width: 100%;
+    margin: 0 auto;
+    align-self: center;
+  }
+  
+  .gosPic{
+    position: absolute;
+    width: 60%;
+    box-shadow: -2px 2px 6px grey;
+    margin: 0 auto;
+    z-index: 0;
+  }
+  .gosMessage{
+    position:relative;
+    top: 0;
+    left: 0;
+    padding:1%;
+    margin: 1% 40% 1% 1%;
+    font-family: 'The Girl Next Door';
+    font-size: 4.1vw;
+    line-height: 140%;
+    white-space: pre-wrap;
+    color:#f2f2f2;
+    color:hsla(0, 0%, 100%,70%);
+    z-index: 1;
+  }
+/* #endregion */
+  

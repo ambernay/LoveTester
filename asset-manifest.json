@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/LoveTester/static/js/main.c67cc70f.chunk.js",
+    "main.js.map": "/LoveTester/static/js/main.c67cc70f.chunk.js.map",
+    "runtime-main.js": "/LoveTester/static/js/runtime-main.4400febe.js",
+    "runtime-main.js.map": "/LoveTester/static/js/runtime-main.4400febe.js.map",
+    "static/js/2.b1e2e5f5.chunk.js": "/LoveTester/static/js/2.b1e2e5f5.chunk.js",
+    "static/js/2.b1e2e5f5.chunk.js.map": "/LoveTester/static/js/2.b1e2e5f5.chunk.js.map",
+    "index.html": "/LoveTester/index.html",
+    "static/js/2.b1e2e5f5.chunk.js.LICENSE.txt": "/LoveTester/static/js/2.b1e2e5f5.chunk.js.LICENSE.txt",
+    "static/media/RyanGoslingGQ.3f8f375e.jpg": "/LoveTester/static/media/RyanGoslingGQ.3f8f375e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4400febe.js",
+    "static/js/2.b1e2e5f5.chunk.js",
+    "static/js/main.c67cc70f.chunk.js"
+  ]
+}
