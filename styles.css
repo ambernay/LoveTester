@@ -1,124 +1,159 @@
 /* #region - stops scroll bounce */
 html, body{
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #root{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
 }
 /* #endregion */
 
+/* #region *//* defining variables */
+
+:root {
+  /* font size */
+  --input-font-size: 3vh;
+  /* color */
+  --background-pink:#f9d2e4;
+  --text-pink-solid: #e01e56;
+  --text-pink-opacity:hsla(343, 76%, 50%, 80%);
+  --off-white:#f2f2f2;
+  --off-white-opacity: hsla(0, 0%, 100%,70%);
+  --outline-color: #ef5b99;
+  --outline-color-opacity: hsla(335, 82%, 65%, 0.5);
+  --shadow: grey;
+  /* grid rows */
+  --grid-top-row-size: 25vh;
+  --grid-mid-row-size: 50vh;
+  --grid-bottom-row-size: 25vh;
+  /* grid columns */
+  --grid-sides-size: 20vw;
+  --grid-middle-size: 60vw;
+}
+/* #endregion *//* defining variables */ 
+
 body{
-    background-color: #f9d2e4;
-    background-image: url("textures/natural-paper.png");
-    /* background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); */
+  background-color: var(--background-pink);
+  background-image: url("textures/natural-paper.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); */
 }
 
 
 #grid{
-    display:grid;
-    grid-template-areas:
-        "header header header"
-        "message-left message-center message-right"
-        "inputs inputs inputs" ;
-    grid-template-rows: 22vh 50vh 28vh;
-    grid-template-columns: 20vw 60vw 20vw;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+  display:grid;
+  grid-template-areas:
+      "header header header"
+      "message-left message-center message-right"
+      "inputs inputs inputs" ;
+  grid-template-rows: 
+    var(--grid-top-row-size) 
+    var(--grid-mid-row-size) 
+    var(--grid-bottom-row-size);
+  grid-template-columns: 
+    var(--grid-sides-size) 
+    var(--grid-middle-size) 
+    var(--grid-sides-size);
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 h1, h3{
-    color: #e01e56;
-    color: hsla(343, 76%, 50%, 80%);
+  color: var(--text-pink-solid);
+  color: var(--text-pink-opacity);
 }
 /* #region heading */
 #heading{
-    grid-area: header;
-    position: relative;
-    align-self: end;
-    background-color:  #f2f2f2;
-    background-image: url("textures/rice-paper-3.png");
-    /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
-    box-shadow: -1px 1px 3px grey;
-    transform:skew(-10deg,-1deg);
-    width: 70%;
-    margin: 0% auto;
-    padding: 0.2% 8% 0.2% 4%;
+  grid-area: header;
+  display: grid;
+  position: relative;
+  align-self: center;
+  background-color:  var(--off-white);
+  background-image: url("textures/rice-paper-3.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
+  box-shadow: -1px 1px 3px var(--shadow);
+  transform:skew(-10deg,-1deg);
+  width: 82vw;
+  margin: 0% auto;
+  /* padding: 0.2% 8% 0.2% 4%; */
 }
 
 #headText{
-    font-family: 'Rock Salt', cursive;
-    font-size: 5em;
-    line-height: 20%;
-    text-align: center;
-    opacity: 0.85;
+  font-family: 'Rock Salt', cursive;
+  font-size: 12vmin;
+  line-height: 10vmin;
+  text-align: center;
+  opacity: 0.85;
+  margin: 4vmin 3vmin;
 }
 /* #endregion */
 
 /* #region message */
 .messagePaper{
-    grid-area: message-center;
-    position:relative;
-    background-color:  #f2f2f2;
-    background-image: url("textures/rice-paper-3.png");
-    /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
-    box-shadow: -1px 1px 3px grey;
-    transform:skew(-10deg,-1deg);
-    margin: 7.5% auto;
-    padding: 1% 5%;
-    width: 75%;
-    align-self:center;
+  grid-area: message-center;
+  position:relative;
+  background-color:  var(--off-white);
+  background-image: url("textures/rice-paper-3.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
+  box-shadow: -1px 1px 3px var(--shadow);
+  transform:skew(-10deg,-1deg);
+  /* margin: 7.5% auto; */
+  padding: 1% 5%;
+  width: 75%;
+  align-self:center;
+  justify-self: center;
 }
 
 .message{
-    font-family: 'The Girl Next Door';
-    font-size: 2.25rem;
-    transform:skew(20deg,1deg);
-    text-align:center;
-    margin: 0 auto;
-    width:100%;
-    z-index: 1;
+  font-family: 'The Girl Next Door';
+  font-size: 6vmin;
+  transform:skew(20deg,1deg);
+  text-align:center;
+  margin: 5px;
+  width:100%;
+  z-index: 1;
 }
 /* #endregion */
 
 /* #region inputs and button */
 .inputArea{
-    grid-area: inputs;
-    position: relative;
-    align-self: start;
-    margin: 0% auto;
+  display: grid;
+  grid-area: inputs;
+  position: relative;
+  align-self: start;
+  justify-self: center;
+  /* margin: 0% auto; */
 }
 
 input, button{
-    background-color:  #f2f2f2;
-    background-image: url("textures/rice-paper-3.png");
-    /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
-    border: 1px solid #f2f2f2;
-    box-shadow: -1px 1px 3px grey;
-    outline-color:#ef5b99;
-    outline-color:hsla(335, 82%, 65%, 0.5);
-    color: #e01e56;
-    color: hsl(343, 76%, 50%);
-    font-family: 'The Girl Next Door';
-    font-size: 1.25rem;
-    height: 40px;
-    text-align: center;
-    margin: 20px;
+  background-color:  var(--off-white);
+  background-image: url("textures/rice-paper-3.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
+  border: 1px solid var(--off-white);
+  box-shadow: -1px 1px 3px var(--shadow);
+  outline-color:#ef5b99;
+  outline-color:var(--outline-color-opacity);
+  color: var(--text-pink-solid);
+  color: hsl(343, 76%, 50%);
+  font-family: 'The Girl Next Door';
+  font-size: var(--input-font-size);
+  height: 40px;
+  text-align: center;
+  margin: 20px;
   }
   .shadowButton :hover{
       box-shadow:none;
   }
   ::placeholder{
-    color: #ef5b99;
+    color: var(--outline-color);
     color: hsl(335, 82%, 65%);
     font-family: 'The Girl Next Door';
-    font-size: 1.25rem;
+    font-size: var(--input-font-size);
     transform: skew(-20deg,-1deg);
     margin: 0 auto;
   }
@@ -135,8 +170,8 @@ input, button{
   #submit{
     transform:skew(-10deg);
     width: 120px; 
-    outline-color:#ef5b99;
-    outline-color:hsla(335, 82%, 65%, 0.5);
+    outline-color:var(--outline-color);
+    outline-color:var(--outline-color-opacity);
   }
 /* #endregion */
 
@@ -146,15 +181,15 @@ input, button{
   .gosling{
     grid-area: message-center;
     z-index: 0;
-    width: 100%;
+    width: var(--grid-middle-size);
     margin: 0 auto;
     align-self: center;
   }
   
   .gosPic{
     position: absolute;
-    width: 60%;
-    box-shadow: -2px 2px 6px grey;
+    width: var(--grid-middle-size) ;
+    box-shadow: -2px 2px 6px var(--shadow);
     margin: 0 auto;
     z-index: 0;
   }
@@ -168,9 +203,58 @@ input, button{
     font-size: 4.1vw;
     line-height: 140%;
     white-space: pre-wrap;
-    color:#f2f2f2;
-    color:hsla(0, 0%, 100%,70%);
+    color: var(--off-white);
+    color:var(--off-white-opacity);
     z-index: 1;
   }
 /* #endregion */
+
+/* #region media queries */
+
+@media (max-width: 750px){
+  /* #region *//* defining variables */
+  :root {
+    /* grid rows */
+    --grid-top-row-size: 34vh;
+    --grid-mid-row-size: 40vh;
+    --grid-bottom-row-size: 26vh;
+    /* grid columns */
+    --grid-sides-size: 10vw;
+    --grid-middle-size: 80vw;
+
+  }
+  /* #endregion *//* defining variables */ 
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 544px){
+  :root{
+    /* grid rows */
+    --grid-top-row-size: 26vh;
+    --grid-mid-row-size: 36vh;
+    --grid-bottom-row-size: 40vh;
+  }
+  input{
+    display: list-item;
+    margin: 15px auto;
+  }
+  button{
+    display: list-item;
+    margin: 35px auto;
+  }
+}
+
+/* height */
+@media (max-height:545px){
+  :root{
+    /* grid rows */
+    --grid-top-row-size: 30vh;
+    --grid-mid-row-size: 36vh;
+    --grid-bottom-row-size: 34vh;
+  }
+}
+
+/* #endregion media queries */
   
