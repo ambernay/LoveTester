@@ -16,15 +16,17 @@ html, body{
 /* #region *//* defining variables */
 
 :root {
-  /* font size */
+  /* fonts */
   --input-font-size: 4vmin;
   --message-font-size: 6vmin;
+  --main-font: 'The Girl Next Door';
+  --heading-font: 'Rock Salt', cursive;
   /* color */
   --background-pink:#f9d2e4;
   --text-pink-solid: #e01e56;
   --text-pink-opacity:hsla(343, 76%, 50%, 80%);
   --off-white:#f2f2f2;
-  --off-white-opacity: hsla(0, 0%, 100%,70%);
+  --off-white-opacity: hsla(0, 0%, 100%, 70%);
   --outline-color: #ef5b99;
   --outline-color-opacity: hsla(335, 82%, 65%, 0.5);
   --shadow: grey;
@@ -85,7 +87,7 @@ h1, h3{
 }
 
 #headText{
-  font-family: 'Rock Salt', cursive;
+  font-family: var(--heading-font);
   font-size: 12vmin;
   line-height: 10vmin;
   text-align: center;
@@ -128,7 +130,6 @@ h1, h3{
   position: relative;
   align-self: start;
   justify-self: center;
-  /* margin: 0% auto; */
 }
 
 input, button{
@@ -137,23 +138,28 @@ input, button{
   /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
   border: 1px solid var(--off-white);
   box-shadow: -1px 1px 3px var(--shadow);
-  outline-color:#ef5b99;
-  outline-color:var(--outline-color-opacity);
   color: var(--text-pink-solid);
-  color: hsl(343, 76%, 50%);
-  font-family: 'The Girl Next Door';
+  color: var(--text-pink-opacity);
+  font-family: var(--main-font);
   font-size: var(--input-font-size);
   height: 40px;
   text-align: center;
   margin: 20px;
-  }
+}
+input:focus{
+  caret-color:var(--outline-color);
+  caret-color:var(--outline-color-opacity);
+  outline-color:var(--outline-color);
+  outline-color:var(--outline-color-opacity);
+}
+
   .shadowButton :hover{
       box-shadow:none;
   }
   ::placeholder{
     color: var(--outline-color);
-    color: hsl(335, 82%, 65%);
-    font-family: 'The Girl Next Door';
+    color: var(--outline-color-opacity);
+    font-family: var(--main-font);
     font-size: var(--input-font-size);
     transform: skew(-20deg,-1deg);
     margin: 0 auto;
@@ -202,7 +208,7 @@ input, button{
     left: 0;
     padding:1%;
     margin: 1% 40% 1% 1%;
-    font-family: 'The Girl Next Door';
+    font-family: var(--main-font);
     font-size: 4.1vw;
     line-height: 140%;
     white-space: pre-wrap;
@@ -235,9 +241,9 @@ input, button{
 @media (max-width: 544px){
   :root{
     /* grid rows */
-    --grid-top-row-size: 26vh;
-    --grid-mid-row-size: 36vh;
-    --grid-bottom-row-size: 40vh;
+    --grid-top-row-size: 25vh;
+    --grid-mid-row-size: 25vh;
+    --grid-bottom-row-size: 50vh;
   }
   input{
     display: list-item;
