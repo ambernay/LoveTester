@@ -17,7 +17,8 @@ html, body{
 
 :root {
   /* font size */
-  --input-font-size: 3vh;
+  --input-font-size: 4vmin;
+  --message-font-size: 6vmin;
   /* color */
   --background-pink:#f9d2e4;
   --text-pink-solid: #e01e56;
@@ -111,7 +112,7 @@ h1, h3{
 
 .message{
   font-family: 'The Girl Next Door';
-  font-size: 6vmin;
+  font-size: var(--message-font-size);
   transform:skew(20deg,1deg);
   text-align:center;
   margin: 5px;
@@ -255,7 +256,11 @@ input, button{
     --grid-top-row-size: 30vh;
     --grid-mid-row-size: 36vh;
     --grid-bottom-row-size: 34vh;
+    /* font size */
+    --input-font-size: 6vmin;
+    --message-font-size: 9vmin;
   }
+
   .gosling{
     width: 80%;
     justify-items: center;
