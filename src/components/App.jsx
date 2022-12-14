@@ -42,18 +42,12 @@ function App(){
             }else{
                 setMessage("You and " + loveFName + " are " + lovePercent + "% compatible!");
             }
-
-            // let loveName = loveFName;
-            // if(loveFName.length > 5){
-            //     let loveName = loveFName.substring(0,5) + "...";
-            // }else{
-            //     let loveName = loveFName;
-            // }
-            // setMessage("You and " + loveName + " are " + lovePercent + "% compatible!");
-           
             setButtonMessage("Try Again?");
         }
       }
+        // to prevent scrolling on mobile
+        document.body.addEventListener('touchmove', function(e)
+        { e.preventDefault(); }, { passive: false });
     return( 
         <div id="grid">
             <Heading />
