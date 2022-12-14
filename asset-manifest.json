@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/LoveTester/static/js/main.c67cc70f.chunk.js",
-    "main.js.map": "/LoveTester/static/js/main.c67cc70f.chunk.js.map",
+    "main.js": "/LoveTester/static/js/main.eedd3ada.chunk.js",
+    "main.js.map": "/LoveTester/static/js/main.eedd3ada.chunk.js.map",
     "runtime-main.js": "/LoveTester/static/js/runtime-main.4400febe.js",
     "runtime-main.js.map": "/LoveTester/static/js/runtime-main.4400febe.js.map",
     "static/js/2.b1e2e5f5.chunk.js": "/LoveTester/static/js/2.b1e2e5f5.chunk.js",
@@ -13,6 +13,6 @@
   "entrypoints": [
     "static/js/runtime-main.4400febe.js",
     "static/js/2.b1e2e5f5.chunk.js",
-    "static/js/main.c67cc70f.chunk.js"
+    "static/js/main.eedd3ada.chunk.js"
   ]
 }
